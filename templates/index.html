@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+    <!-- linking this page to the css style page-->
+    <title>Crud Application</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Link to your JavaScript file -->
+    <script src="script.js"></script>
+
+
+
+
+</head>
+
+<body>
+    <header class="header">
+
+    </header>
+    <!-- this section is for my navigation bar to move to different pages -->
+    <div class="hero">
+
+
+        <!-- This is section is for my home page bio/intro-->
+        <div class="intro">
+            <br> <br> <br> <br> <br> <br>
+            <h1>Basic CURD Application</h1>
+            <h2>Create, Update, Read, Delete <br> information into the database</h2>
+
+        </div>
+
+
+        <div class="db">
+
+            <!-- Buttons for CURD functions-->
+            <button id="ADD">CREATE</button>
+            <button id="SEARCH"> UPDATE</button>
+            <button id="UPDATE">SEARCH</button>
+            <button id="DELETE">DELETE</button>
+            <h1>Database Content</h1>
+            <table>
+                <tr>
+                    <!--database info headers-->
+                    <th>Name </th>
+                    <th>ID </th>
+                    <th>Points </th>
+                </tr>
+
+                <!-- displaing the content inside of the database using a loop-->
+                {% for user in users %}
+                <tr>
+
+                    <td>{{ user['name'] }}</td>
+                    <td>{{ user['id'] }}</td>
+                    <td>{{ user['points'] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</body>
+
+<div>
+
+
+
+</div>
+
+
+</html>
